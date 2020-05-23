@@ -30,7 +30,7 @@ class Occupency(models.Model):
     end_date        =       models.DateField()
 
     def __str__(self):
-        return self.preperty + '_' + self.tenant
+        return str(self.property) + '_' + str(self.tenant)
     
 
 class Rent(models.Model):
@@ -41,5 +41,5 @@ class Rent(models.Model):
     remarks         =       models.CharField(max_length=1000, blank=True)
 
     def __str__(self):
-        return self.occupency
+        return str(self.occupency)
     
