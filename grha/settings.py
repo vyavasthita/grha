@@ -80,11 +80,11 @@ WSGI_APPLICATION = 'grha.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'renting',
-        'USER': 'sharma',
-        'PASSWORD': 'kumar579',
-        'HOST': 'db4free.net',
-        'PORT': '3306',
+        'NAME': 'tenancy',
+        'USER': 'local',
+        'PASSWORD': 'local.',
+        'HOST': '127.0.0.1',
+        'PORT': '',
     }
 }
 
