@@ -1,3 +1,4 @@
+{% load i18n %}
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -9,7 +10,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-    <title>Grah Karya</title>
+    <title>{% trans "Home Work" %}</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -24,32 +25,32 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="{% url 'home' %}"> {% trans "Home" %} <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">Milk</a>
+                        <a class="nav-link" href="">{% trans "Milk" %}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'tenancy' %}">Tenancy</a>
+                        <a class="nav-link" href="{% url 'tenancy' %}">{% trans "Tenancy" %}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">Money</a>
+                        <a class="nav-link" href="">{% trans "Money" %}</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Connections
+                        {% trans "Connections" %}
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Water</a>
-                        <a class="dropdown-item" href="#">Electricity</a>
-                        <a class="dropdown-item" href="#">Gas</a>
-                        <a class="dropdown-item" href="#">Tata Sky</a>
+                        <a class="dropdown-item" href="#">{% trans "Water" %}</a>
+                        <a class="dropdown-item" href="#">{% trans "Electricity" %}</a>
+                        <a class="dropdown-item" href="#">{% trans "Gas" %}</a>
+                        <a class="dropdown-item" href="#">{% trans "Tata Sky" %}</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Others</a>
+                        <a class="dropdown-item" href="#">{% trans "Others" %}</a>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">{% trans "Disabled" %}</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav mr-auto">
@@ -61,8 +62,8 @@
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                <input class="form-control mr-sm-2" type="search" placeholder={% trans "Search" %} aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">{% trans "Search" %}</button>
                 </form>
             </div>
         </div>

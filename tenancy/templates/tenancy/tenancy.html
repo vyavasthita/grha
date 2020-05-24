@@ -1,17 +1,18 @@
 {% extends 'base.html' %}
+{% load i18n %}
 
 {% block base %}
     <div class = "container">
         <table class="table-responsive-sm table-sm table-light table-striped table-bordered table-hover" style="margin-top: 30px">
-            <caption> Kiraya Soochi </caption>
+            <caption> {% trans "Rent List" %} </caption>
             <thead class="thead-dark">
                 <tr>
-                <th scope="col">#</th>
-                <th scope="col">Kirayedaar</th>
-                <th scope="col">Kiraya Mahina</th>
-                <th scope="col">Kiraya Dinaank</th>
-                <th scope="col">Kiraya</th>
-                <th scope="col">Tippanni</th>
+                    <th scope="col">#</th>
+                    <th scope="col">{% trans 'Occupency'%}</th>
+                    <th scope="col">{% trans 'Rent Month'%}</th>
+                    <th scope="col">{% trans 'Payment Date'%}</th>
+                    <th scope="col">{% trans 'Amount'%}</th>
+                    <th scope="col">{% trans 'Remark'%}</th>
                 </tr>
             </thead>
             {% for r in rent %}

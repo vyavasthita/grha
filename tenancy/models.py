@@ -38,7 +38,7 @@ class Rent(models.Model):
     rent_month      =       models.DateField()
     payment_date    =       models.DateField(default = date.today)
     amount          =       models.FloatField()
-    remarks         =       models.CharField(max_length=1000, blank=True)
+    remark          =       models.CharField(max_length=1000, blank=True)
 
     def __str__(self):
         return str(self.occupency)

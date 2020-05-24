@@ -1,0 +1,87 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-24 13:26+1000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: grha/settings.py:121
+msgid "English"
+msgstr "ಆಂಗ್ಲ"
+
+#: grha/settings.py:122
+msgid "Hindi"
+msgstr "ಹಿಂದಿ"
+
+#: grha/settings.py:123
+msgid "Kannada"
+msgstr "ಕನ್ನಡ"
+
+#: templates/admin/base_site.html:3
+msgid "Django site admin"
+msgstr "ಜಾಂಗೊ ಸೈಟ್ ನಿರ್ವಾಹಕ"
+
+#: templates/base.html:13
+msgid "Home Work"
+msgstr "ಮನೆ ಕೆಲಸ"
+
+#: templates/base.html:28
+msgid "Home"
+msgstr "ಮನೆ"
+
+#: templates/base.html:31
+msgid "Milk"
+msgstr "ಹಾಲು"
+
+#: templates/base.html:34
+msgid "Tenancy"
+msgstr "ಬಾಡಿಗೆದಾರ"
+
+#: templates/base.html:37
+msgid "Money"
+msgstr "ಹಣ"
+
+#: templates/base.html:41
+msgid "Connections"
+msgstr "ಸಂಪರ್ಕ"
+
+#: templates/base.html:44
+msgid "Water"
+msgstr "ನೀರು"
+
+#: templates/base.html:45
+msgid "Electricity"
+msgstr "ವಿದ್ಯುತ್"
+
+#: templates/base.html:46
+msgid "Gas"
+msgstr "ಅನಿಲ"
+
+#: templates/base.html:47
+msgid "Tata Sky"
+msgstr "ಟಾಟಾ ಸ್ಕೈ"
+
+#: templates/base.html:49
+msgid "Others"
+msgstr "ಇತರರು"
+
+#: templates/base.html:53
+msgid "Disabled"
+msgstr "ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಲಾಗಿದೆ"
+
+#: templates/base.html:65 templates/base.html:66
+msgid "Search"
+msgstr "ಹುಡುಕಿ"

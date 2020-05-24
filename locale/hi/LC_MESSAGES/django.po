@@ -1,0 +1,83 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-24 12:49+1000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: grha/settings.py:124
+msgid "English"
+msgstr ""
+
+#: grha/settings.py:125
+msgid "Hindi"
+msgstr ""
+
+#: templates/admin/base_site.html:3
+msgid "Django site admin"
+msgstr "साइट व्यवस्थापक"
+
+#: templates/base.html:13
+msgid "Home Work"
+msgstr "गृह कार्य"
+
+#: templates/base.html:28
+msgid "Home"
+msgstr "गृह"
+
+#: templates/base.html:31
+msgid "Milk"
+msgstr "दूध"
+
+#: templates/base.html:34
+msgid "Tenancy"
+msgstr "किरायेदार"
+
+#: templates/base.html:37
+msgid "Money"
+msgstr "पैसे"
+
+#: templates/base.html:41
+msgid "Connections"
+msgstr "कनेक्शन"
+
+#: templates/base.html:44
+msgid "Water"
+msgstr "जल"
+
+#: templates/base.html:45
+msgid "Electricity"
+msgstr "विधुत"
+
+#: templates/base.html:46
+msgid "Gas"
+msgstr "गैस"
+
+#: templates/base.html:47
+msgid "Tata Sky"
+msgstr "टाटा स्काई"
+
+#: templates/base.html:49
+msgid "Others"
+msgstr "अन्य"
+
+#: templates/base.html:53
+msgid "Disabled"
+msgstr "अक्षम"
+
+#: templates/base.html:65 templates/base.html:66
+msgid "Search"
+msgstr "खोज"

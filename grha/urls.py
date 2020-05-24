@@ -14,6 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+from django.conf.urls.i18n import i18n_patterns
 from django.urls import path, include
 
 
@@ -22,3 +23,9 @@ urlpatterns = [
     path('tenancy/', include('tenancy.tenancyurls')),
     path('', include('home.homeurls'))
 ]
+
+urlpatterns += i18n_patterns(
+    path('admin/', admin.site.urls),
+    path('tenancy', include('tenancy.tenancyurls')),
+    path('', include('home.homeurls')),
+)
