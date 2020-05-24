@@ -16,7 +16,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: grha/settings.py:121 templates/base.html:65
 msgid "English"
@@ -32,56 +32,56 @@ msgstr "ಕನ್ನಡ"
 
 #: templates/admin/base_site.html:3
 msgid "Django site admin"
-msgstr "ಜಾಂಗೊ ಸೈಟ್ ನಿರ್ವಾಹಕ"
+msgstr "Django site admin"
 
 #: templates/base.html:13
 msgid "Home Work"
-msgstr "ಮನೆ ಕೆಲಸ"
+msgstr "Home Work"
 
 #: templates/base.html:28
 msgid "Home"
-msgstr "ಮನೆ"
+msgstr "Home"
 
 #: templates/base.html:31
 msgid "Milk"
-msgstr "ಹಾಲು"
+msgstr "Milk"
 
 #: templates/base.html:34
 msgid "Tenancy"
-msgstr "ಬಾಡಿಗೆದಾರ"
+msgstr "Tenancy"
 
 #: templates/base.html:37
 msgid "Money"
-msgstr "ಹಣ"
+msgstr "Money"
 
 #: templates/base.html:41
 msgid "Connections"
-msgstr "ಸಂಪರ್ಕ"
+msgstr "Connections"
 
 #: templates/base.html:44
 msgid "Water"
-msgstr "ನೀರು"
+msgstr "Water"
 
 #: templates/base.html:45
 msgid "Electricity"
-msgstr "ವಿದ್ಯುತ್"
+msgstr "Electricity"
 
 #: templates/base.html:46
 msgid "Gas"
-msgstr "ಅನಿಲ"
+msgstr "Gas"
 
 #: templates/base.html:47
 msgid "Tata Sky"
-msgstr "ಟಾಟಾ ಸ್ಕೈ"
+msgstr "Tata Sky"
 
 #: templates/base.html:49
 msgid "Others"
-msgstr "ಇತರರು"
+msgstr "Others"
 
 #: templates/base.html:53
 msgid "Disabled"
-msgstr "ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಲಾಗಿದೆ"
+msgstr "Disabled"
 
 #: templates/base.html:74 templates/base.html:75
 msgid "Search"
-msgstr "ಹುಡುಕಿ"
+msgstr "Search"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-24 12:49+1000\n"
+"POT-Creation-Date: 2020-05-24 15:20+1000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,13 +18,17 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: grha/settings.py:124
+#: grha/settings.py:121 templates/base.html:66
 msgid "English"
-msgstr ""
+msgstr "English"
 
-#: grha/settings.py:125
+#: grha/settings.py:122 templates/base.html:69
 msgid "Hindi"
-msgstr ""
+msgstr "हिन्दी"
+
+#: grha/settings.py:123 templates/base.html:72
+msgid "Kannada"
+msgstr "कन्नड़"
 
 #: templates/admin/base_site.html:3
 msgid "Django site admin"
@@ -78,6 +82,5 @@ msgstr "अन्य"
 msgid "Disabled"
 msgstr "अक्षम"
 
-#: templates/base.html:65 templates/base.html:66
-msgid "Search"
-msgstr "खोज"
+#~ msgid "Search"
+#~ msgstr "खोज"
