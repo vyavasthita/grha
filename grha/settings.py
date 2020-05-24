@@ -28,7 +28,7 @@ SECRET_KEY = '^34ddi!^nn6@+l=)y4yf2@jbskv+i@e^w*&-ospit41#ea5ehp'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["192.168.8.128"]
+ALLOWED_HOSTS = ["192.168.8.128", "https://grha.herokuapp.com"]
 
 
 # Application definition
