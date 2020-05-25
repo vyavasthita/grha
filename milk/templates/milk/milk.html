@@ -3,7 +3,19 @@
 
 {% block base %}
     <div class = "container">
-        <table class="table-responsive-sm table-sm table-light table-striped table-bordered table-hover" style="margin-top: 30px">
+        <div style="text-align:left; margin-top:20px">
+            <form action="{% url 'milk' %}" method="post">
+                {% csrf_token %}
+                <label for="filter-start-date-input" >Start Date</label>
+                <input name="start_date" type="date" id="filter-start-date-input"/>
+                <label for="filter-end-date-input">End Date</label>
+                <input name="end_date" type="date" id="filter-end-date-input"/>
+                <button type="submit" class="btn btn-primary btn-sm">
+                    Go
+                </button>
+            </form>
+        </div>
+        <table class="table-responsive-sm table-sm table-light table-striped table-bordered table-hover" style="margin-top: 5px">
             <caption> {% trans "Milk Service" %} </caption>
             <thead class="thead-dark">
                 <tr>

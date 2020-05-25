@@ -119,9 +119,9 @@ LOCALE_PATHS = (
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
 
 LANGUAGES = (
-    ('en', _('English')),
     ('hi', _('Hindi')),
     ('kn', _('Kannada')),
+    ('en', _('English')),
 )
 
 # Default language for your site
