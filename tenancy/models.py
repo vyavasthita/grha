@@ -1,5 +1,5 @@
 from django.db import models
-from datetime import timezone, timedelta, date
+from datetime import date
 
 
 class Tenant(models.Model):

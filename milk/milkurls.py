@@ -1,4 +1,4 @@
-"""grha URL Configuration
+"""home URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.0/topics/http/urls/
@@ -13,22 +13,11 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
-from django.conf.urls.i18n import i18n_patterns
-from django.urls import path, include
+
+from django.urls import path
+from . import views
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('milk/', include('milk.milkurls')),
-    path('tenancy/', include('tenancy.tenancyurls')),
-    path('i18n/', include('django.conf.urls.i18n')),
-    path('', include('home.homeurls'))
+    path('', views.milk, name='milk'),
 ]
-
-urlpatterns += i18n_patterns(
-    path('admin/', admin.site.urls),
-    path('milk/', include('milk.milkurls')),
-    path('tenancy', include('tenancy.tenancyurls')),
-    path('', include('home.homeurls')),
-)

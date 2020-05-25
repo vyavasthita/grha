@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block base %}
+    <div class = "container">
+        <table class="table-responsive-sm table-sm table-light table-striped table-bordered table-hover" style="margin-top: 30px">
+            <caption> {% trans "Milk Service" %} </caption>
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">{% trans 'Milk Man'%}</th>
+                    <th scope="col">{% trans 'Date'%}</th>
+                    <th scope="col">{% trans 'Quantity'%}</th>
+                    <th scope="col">{% trans 'Remark'%}</th>
+                </tr>
+            </thead>
+            {% for service in service_details %}
+                <tbody>
+                    <tr>
+                        <th scope="row">{{ forloop.counter }}</th>
+                        <td>{{ service.milk_man }}</td>
+                        <td>{{ service.date }}</td>
+                        <td>{{ service.quantity }}</td>
+                        <td>{{ service.remark }}</td>
+                    </tr>
+                </tbody>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}
