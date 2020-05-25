@@ -22,7 +22,7 @@ class Service(models.Model):
     date            =       models.DateField()
     quantity        =       models.FloatField()
     rate            =       models.ForeignKey(Rate, on_delete=models.CASCADE)
-    remark          =       models.CharField(max_length=100, null=True)
+    remark          =       models.CharField(max_length=100, blank = True, null=True)
 
     def __str__(self):
         return str(self.milk_man) + '_' + str(self.date)

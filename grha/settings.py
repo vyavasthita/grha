@@ -34,9 +34,9 @@ ALLOWED_HOSTS = ["192.168.8.128", "https://grha.herokuapp.com"]
 # Application definition
 
 INSTALLED_APPS = [
-    'home',
-    'milk',
-    'tenancy',
+    'home.apps.HomeConfig',
+    'milk.apps.MilkConfig',
+    'tenancy.apps.TenancyConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

@@ -27,7 +27,6 @@ urlpatterns = [
 ]
 
 urlpatterns += i18n_patterns(
-    path('admin/', admin.site.urls),
     path('milk/', include('milk.milkurls')),
     path('tenancy', include('tenancy.tenancyurls')),
     path('', include('home.homeurls')),
