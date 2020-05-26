@@ -27,8 +27,17 @@
                             <li class="nav-item active">
                                 <a class="nav-link" href="{% url 'home' %}"> {% trans "Home" %} <span class="sr-only">(current)</span></a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{% url 'milk' %}">{% trans "Milk" %}</a>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                {% trans "Milk" %}
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item nav-link" href="{% url 'supply' %}">{% trans "Supply" %}</a>
+                                <a class="dropdown-item nav-link" href="{% url 'bill' %}">{% trans "Bill" %}</a>
+                                <a class="dropdown-item nav-link" href="{% url 'payment' %}">{% trans "Payment" %}</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">{% trans "Others" %}</a>
+                                </div>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{% url 'tenancy' %}">{% trans "Tenancy" %}</a>

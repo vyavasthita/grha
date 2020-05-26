@@ -19,5 +19,8 @@ from . import views
 
 
 urlpatterns = [
-    path('', views.milk, name='milk'),
+    # path('', views.milk, name='milk'),
+    path('supply/', views.supply, name='supply'),
+    path('bill/', views.bill, name='bill'),
+    path('payment/', views.payment, name='payment'),
 ]

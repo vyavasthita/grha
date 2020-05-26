@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.conf.urls.i18n import i18n_patterns
 from django.urls import path, include
 
-
+# Pattern without language like /milk
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('milk/', include('milk.milkurls')),
@@ -26,6 +26,7 @@ urlpatterns = [
     path('', include('home.homeurls'))
 ]
 
+# Pattern for language like /hi/milk
 urlpatterns += i18n_patterns(
     path('milk/', include('milk.milkurls')),
     path('tenancy', include('tenancy.tenancyurls')),

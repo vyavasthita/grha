@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block base %}
+    <div class = "container">
+        <div style="text-align:left; margin-top:20px">
+            <form action="{% url 'supply' %}" method="post">
+                {% csrf_token %}
+                <label for="filter-start-date-input" >{% trans "Start Date" %}</label>
+                <input name="start_date" type="date" id="filter-start-date-input"/>
+                <label for="filter-end-date-input">{% trans "End Date" %}</label>
+                <input name="end_date" type="date" id="filter-end-date-input"/>
+                <button type="submit" class="btn btn-primary btn-sm">
+                    View
+                </button>
+            </form>
+        </div>
+        <table class="table-responsive-sm table-sm table-light table-striped table-bordered table-hover" style="margin-top: 5px">
+            <caption> {% trans "Milk Supply" %} </caption>
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">{% trans 'Supplier'%}</th>
+                    <th scope="col">{% trans 'Date'%}</th>
+                    <th scope="col">{% trans 'Quantity'%}</th>
+                    <th scope="col">{% trans 'Remark'%}</th>
+                </tr>
+            </thead>
+            {% for service in service_details %}
+                <tbody>
+                    <tr>
+                        <th scope="row">{{ forloop.counter }}</th>
+                        <td>{{ service.supplier }}</td>
+                        <td>{{ service.date }}</td>
+                        <td>{{ service.quantity }}</td>
+                        <td>{{ service.remark }}</td>
+                    </tr>
+                </tbody>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}
