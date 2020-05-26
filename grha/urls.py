@@ -28,7 +28,4 @@ urlpatterns = [
 
 # Pattern for language like /hi/milk
 urlpatterns += i18n_patterns(
-    path('milk/', include('milk.milkurls')),
-    path('tenancy', include('tenancy.tenancyurls')),
-    path('', include('home.homeurls')),
 )
