@@ -18,26 +18,34 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: tenancy/templates/tenancy/tenancy.html:7
-msgid "Rent List"
-msgstr "ಬಾಡಿಗೆ ಪಟ್ಟಿ"
+#: milk/apps.py:8
+msgid "milk"
+msgstr "ಹಾಲು"
 
-#: tenancy/templates/tenancy/tenancy.html:11
-msgid "Occupency"
-msgstr "ನಿವಾಸಿ"
+#: milk/templates/milk/milk.html:9
+msgid "Start Date"
+msgstr "ಪ್ರಾರಂಭ ದಿನಾಂಕ"
 
-#: tenancy/templates/tenancy/tenancy.html:12
-msgid "Rent Month"
-msgstr "ಬಾಡಿಗೆ ತಿಂಗಳು"
+#: milk/templates/milk/milk.html:11
+msgid "End Date"
+msgstr "ಅಂತಿಮ ದಿನಾಂಕ"
 
-#: tenancy/templates/tenancy/tenancy.html:13
-msgid "Payment Date"
-msgstr "ಪಾವತಿ ದಿನಾಂಕ"
+#: milk/templates/milk/milk.html:19
+msgid "Milk Service"
+msgstr "ಹಾಲು ಸೇವೆ"
 
-#: tenancy/templates/tenancy/tenancy.html:14
-msgid "Amount"
-msgstr "ಮೊತ್ತ"
+#: milk/templates/milk/milk.html:23
+msgid "Supplier"
+msgstr "ಸರಬರಾಜುದಾರ"
 
-#: tenancy/templates/tenancy/tenancy.html:15
+#: milk/templates/milk/milk.html:24
+msgid "Date"
+msgstr "ದಿನಾಂಕ"
+
+#: milk/templates/milk/milk.html:25
+msgid "Quantity"
+msgstr "ಪ್ರಮಾಣ"
+
+#: milk/templates/milk/milk.html:26
 msgid "Remark"
 msgstr "ಟೀಕೆ"

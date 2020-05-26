@@ -1,12 +1,12 @@
 from django.shortcuts import render
-from .models import MilkMan, Service
+from .models import Supplier, Service
 from datetime import datetime
 from calendar import monthrange
 
 
 class ServiceDetail:
     def __init__(self):
-        self.milk_man = ''
+        self.supplier = ''
         self.date = ''
         self.quantity = ''
         self.remark = ''
@@ -28,12 +28,12 @@ def milk(request):
             end_date = datetime.strptime(filter_end_date, date_format).date()        # Convert 'str' to 'date' object
 
     service_details = list()
-    services = Service.objects.all().filter(date__gte = start_date, date__lte = end_date)
+    services = Service.objects.all().filter(date__gte = start_date, date__lte = end_date).order_by('date')
     
     if services:
         for service in services:
             service_detail              =   ServiceDetail()
-            service_detail.milk_man     =   service.milk_man.name
+            service_detail.supplier     =   service.supplier.name
             service_detail.date         =   service.date
             service_detail.quantity     =   service.quantity
             service_detail.remark       =   service.remark

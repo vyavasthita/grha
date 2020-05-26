@@ -6,9 +6,9 @@
         <div style="text-align:left; margin-top:20px">
             <form action="{% url 'milk' %}" method="post">
                 {% csrf_token %}
-                <label for="filter-start-date-input" >Start Date</label>
+                <label for="filter-start-date-input" >{% trans "Start Date" %}</label>
                 <input name="start_date" type="date" id="filter-start-date-input"/>
-                <label for="filter-end-date-input">End Date</label>
+                <label for="filter-end-date-input">{% trans "End Date" %}</label>
                 <input name="end_date" type="date" id="filter-end-date-input"/>
                 <button type="submit" class="btn btn-primary btn-sm">
                     Go
@@ -20,7 +20,7 @@
             <thead class="thead-dark">
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">{% trans 'Milk Man'%}</th>
+                    <th scope="col">{% trans 'Supplier'%}</th>
                     <th scope="col">{% trans 'Date'%}</th>
                     <th scope="col">{% trans 'Quantity'%}</th>
                     <th scope="col">{% trans 'Remark'%}</th>
@@ -30,7 +30,7 @@
                 <tbody>
                     <tr>
                         <th scope="row">{{ forloop.counter }}</th>
-                        <td>{{ service.milk_man }}</td>
+                        <td>{{ service.supplier }}</td>
                         <td>{{ service.date }}</td>
                         <td>{{ service.quantity }}</td>
                         <td>{{ service.remark }}</td>

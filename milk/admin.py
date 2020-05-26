@@ -1,8 +1,8 @@
 from django.contrib import admin
-from .models import MilkMan, Rate, Service, Bill, Payment
+from .models import Supplier, Rate, Service, Bill, Payment
 
 
-admin.site.register(MilkMan)
+admin.site.register(Supplier)
 admin.site.register(Rate)
 admin.site.register(Service)
 admin.site.register(Bill)
