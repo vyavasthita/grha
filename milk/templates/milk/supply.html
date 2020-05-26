@@ -15,10 +15,10 @@
                 </button>
             </form>
         </div>
-        <table class="table-responsive-sm table-sm table-light table-striped table-bordered table-hover" style="margin-top: 5px">
+        <table class="table-responsive-sm table-sm table-dark table-striped table-bordered table-hover" style="margin-top: 5px">
             <caption> {% trans "Milk Supply" %} </caption>
             <thead class="thead-dark">
-                <tr>
+                <tr class="bg-primary">
                     <th scope="col">#</th>
                     <th scope="col">{% trans 'Supplier'%}</th>
                     <th scope="col">{% trans 'Date'%}</th>
@@ -27,7 +27,7 @@
                 </tr>
             </thead>
             {% for service in service_details %}
-                <tbody>
+                <tbody class="table-striped">
                     <tr>
                         <th scope="row">{{ forloop.counter }}</th>
                         <td>{{ service.supplier }}</td>
