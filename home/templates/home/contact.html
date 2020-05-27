@@ -6,7 +6,7 @@
   </head>
   <body>
     {% block base %}
-    <form action="/contact/" method = "post">
+    <form action="{% url 'contact' %}" method = "post">
       {% csrf_token %}
       {{ contact.as_p }}
       <input type="submit" value="Submit">
