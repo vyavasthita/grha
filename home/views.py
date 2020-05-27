@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from lib.grah.forms import ContactForm
 from django.core.mail import send_mail
+from decouple import config, Csv        # Please update .env file or config vars on Heroku
 
 
 def contact(request):
@@ -22,8 +23,8 @@ def contact(request):
             message     =   contact.cleaned_data['message']
             sender      =   contact.cleaned_data['sender']
             cc_myself   =   contact.cleaned_data['cc_myself']
-
-            recipients = ['dilipdk2506@gmail.com']
+            
+            recipients = config('EMAIL_RECIPIENTS', cast=Csv())
 
             if cc_myself:
                 recipients.append(sender)

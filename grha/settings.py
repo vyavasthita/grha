@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 import django_heroku
 import os
 from django.utils.translation import gettext_lazy as _
+from decouple import config, Csv        # Please update .env file or config vars on Heroku
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -23,13 +24,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '^34ddi!^nn6@+l=)y4yf2@jbskv+i@e^w*&-ospit41#ea5ehp'
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config('DEBUG', default = True, cast=bool)
 
-ALLOWED_HOSTS = ["192.168.8.128", "https://grha.herokuapp.com"]
-
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
 # Application definition
 
@@ -84,10 +84,10 @@ WSGI_APPLICATION = 'grha.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'tenancy',
-        'USER': 'local',
-        'PASSWORD': 'local.',
-        'HOST': '127.0.0.1',
+        'NAME': config('MYSQL_DB_NAME'),
+        'USER': config('MYSQL_DB_USER'),
+        'PASSWORD': config('MYSQL_DB_PASSWORD'),
+        'HOST': config('MYSQL_DB_HOST'),
         'PORT': '',
     }
 }
@@ -140,6 +140,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = config('EMAIL_HOST')
+EMAIL_PORT = config('EMAIL_PORT', cast=int)
+EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+EMAIL_USE_TLS=True
 
 # Activate Django-Heroku.
 django_heroku.settings(locals())
