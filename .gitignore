@@ -1,5 +1,5 @@
 # VS Code
-.vscode/*
+.vscode
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
@@ -24,6 +24,8 @@ tests/coverage_html/
 tests/.coverage
 build/
 tests/report/
+
+db.sqlite3
 
 # Others
 .env
