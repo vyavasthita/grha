@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+
+
+{% block base %}
+    {% if milk_view %}
+        <div class="card" style="width: 18rem; margin-top:20px">
+            <img src="{% static 'milk/images/cow.jpeg' %}" class="card-img-top" width="50" height="50" loading="lazy" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{% trans "Supply" %}</h5>
+                <p class="card-text">To View and update milk supply.</p>
+                <a href="{% url 'supply_view' %}" class="btn btn-primary">{% trans "View" %}</a>
+                <a href="{% url 'supply_update' %}" class="btn btn-primary">{% trans "Update" %}</a>
+            </div>
+        </div>
+    {% elif supply_view %}
+        <div class = "container">
+            <div style="text-align:left; margin-top:20px">
+                <form action="{% url 'supply_view' %}" method="post">
+                    {% csrf_token %}
+                    {{ date_selector }}
+                    <button type="submit" class="btn btn-primary btn-sm">
+                        Search Records
+                    </button>
+                </form>
+            </div>
+            <table class="table-responsive-sm table-sm table-dark table-striped table-bordered table-hover" style="margin-top: 5px">
+                <caption> {% trans "Milk Supply" %} </caption>
+                <thead class="thead-dark">
+                    <tr class="bg-primary">
+                        <th scope="col">#</th>
+                        <th scope="col">{% trans 'Supplier'%}</th>
+                        <th scope="col">{% trans 'Date'%}</th>
+                        <th scope="col">{% trans 'Quantity'%}</th>
+                        <th scope="col">{% trans 'Remark'%}</th>
+                    </tr>
+                </thead>
+                {% for service in supply_view %}
+                    <tbody class="table-striped">
+                        <tr>
+                            <th scope="row">{{ forloop.counter }}</th>
+                            <td>{{ service.supplier }}</td>
+                            <td>{{ service.date }}</td>
+                            <td>{{ service.quantity }}</td>
+                            <td>{{ service.remark }}</td>
+                        </tr>
+                    </tbody>
+                {% endfor %}
+            </table>
+        </div>
+    {% elif supply_update %}
+        <div style="text-align:left; margin-top:20px">
+            <form action="{% url 'supply_update' %}" method="post">
+                {% csrf_token %}
+                {{ supply_update }}
+                <button type="submit" class="btn btn-primary btn-sm">
+                    Add Supply
+                </button>
+            </form>
+        </div>
+    {% endif %}
+{% endblock %}
+

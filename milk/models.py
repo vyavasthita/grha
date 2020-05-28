@@ -8,7 +8,7 @@ class Supplier(models.Model):
 
     def __str__(self):
         return self.name
-    
+
 class Rate(models.Model):
     supplier        =       models.ForeignKey(Supplier, on_delete=models.CASCADE)
     rate            =       models.FloatField()
