@@ -17,7 +17,7 @@ Including another URLconf
 
 from django.urls import path
 from django.views.generic import TemplateView
-from .views import MilkView, SupplyView, SupplyUpdateView, BillView, BillUpdateView
+from .views import MilkView, SupplyView, SupplyUpdateView, BillView, BillUpdateView, PaymentView, PaymentPayView
 
 
 urlpatterns = [
@@ -27,5 +27,6 @@ urlpatterns = [
     path('supply/update/', SupplyUpdateView.as_view(), name='supply_update'),
     path('bill/view/', BillView.as_view(), name='bill_view'),
     path('bill/generate/', BillUpdateView.as_view(), name='bill_generate'),
-    # path('payment/', views.payment, name='payment'),
+    path('payment/view/', PaymentView.as_view(), name='payment_view'),
+    path('payment/pay/', PaymentPayView.as_view(), name='payment_pay'),
 ]
