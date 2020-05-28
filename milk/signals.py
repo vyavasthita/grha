@@ -32,9 +32,7 @@ def update_bill(start_date, end_date):  # Update Bill model
     # for each milk man:
     #   generate bill
 
-    suppliers = Supplier.objects.all()
-
-    for supplier in suppliers:
+    for supplier in Supplier.objects.all():
         services = Service.objects.all().filter(date__gte = start_date, date__lte = end_date, supplier=supplier)
         
         if services:

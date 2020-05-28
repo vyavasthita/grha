@@ -2,7 +2,7 @@ from django import forms
 from .models import Service
 
 
-class SupplyViewForm(forms.Form):
+class DateSelectForm(forms.Form):
     start_date = forms.CharField(label='From', widget=forms.widgets.DateTimeInput(attrs={"type": "date"}))
     end_date = forms.DateField(label='To', widget=forms.widgets.DateTimeInput(attrs={"type": "date"}))
 

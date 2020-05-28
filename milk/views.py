@@ -3,7 +3,7 @@ from .models import Supplier, Service, Bill, Payment
 from datetime import datetime
 from calendar import monthrange
 from django.views import View
-from .forms import SupplyViewForm, SupplyUpdateForm
+from .forms import DateSelectForm, SupplyUpdateForm
 
 
 def last_day_of_month(date_value):
@@ -29,9 +29,9 @@ class SupplyView(View):
         super(SupplyView, self).__init__()
 
         self.template_name = 'milk/milk.html'
-        self.form_class = SupplyViewForm
+        self.form_class = DateSelectForm
         
-        self.start_date = datetime.today().replace(day=11)
+        self.start_date = datetime.today().replace(day=1)
         self.end_date = last_day_of_month(datetime.today().date())
 
     def get(self, request):
@@ -85,6 +85,94 @@ class SupplyUpdateView(View):
         if update_form.is_valid():
             update_form.save()
             context = {"supply_update" : update_form}
+
+        return render(request, 'milk/milk.html', context)
+
+
+class BillView(View):
+    class BillDetail:
+        def __init__(self):
+            self.supplier = ''
+            self.start_date = ''
+            self.end_date = ''
+            self.amount = ''
+
+    def __init__(self):
+        super(BillView, self).__init__()
+
+        self.template_name = 'milk/milk.html'
+        self.form_class = DateSelectForm
+        
+        self.start_date = datetime.today().replace(day=1)
+        self.end_date = last_day_of_month(datetime.today().date())
+
+    def get(self, request):
+        date_selector = self.form_class()
+        context = self.process_request(date_selector)
+
+        return render(request, self.template_name, context)
+    
+    def post(self, request):
+        date_selector = self.form_class(request.POST)
+
+        if date_selector.is_valid():
+            self.start_date = date_selector.cleaned_data['start_date']
+            self.end_date = date_selector.cleaned_data['end_date']
+
+        context = self.process_request(date_selector)
+
+        return render(request, self.template_name, context)
+
+    def process_request(self, date_selector):
+        bill_details = list()
+
+        for bill in Bill.objects.all().filter(start_date__gte = self.start_date, end_date__lte = self.end_date).order_by('start_date'):
+            bill_detail                 =   BillView.BillDetail()
+
+            bill_detail.supplier        =   bill.supplier.name
+            bill_detail.start_date      =   bill.start_date
+            bill_detail.end_date        =   bill.end_date
+            bill_detail.amount          =   bill.amount
+
+            bill_details.append(bill_detail)
+    
+        return {'bill_view' : bill_details, "date_selector" : date_selector}
+
+
+class BillUpdateView(View):
+    def get(self, request):
+        date_selector = DateSelectForm()
+
+        context = {"bill_generate" : date_selector}
+
+        return render(request, 'milk/milk.html', context)
+
+    def post(self, request):
+        context = dict()
+
+        date_selector = DateSelectForm(request.POST)
+
+        if date_selector.is_valid():
+            start_date = date_selector.cleaned_data['start_date']
+            end_date = date_selector.cleaned_data['end_date']
+
+            for supplier in Supplier.objects.all():
+                amount = 0
+
+                for service_ob in Service.objects.all().filter(
+                        date__gte = start_date, 
+                        date__lte = end_date,
+                        supplier = supplier):
+                    amount += service_ob.quantity * service_ob.rate.rate
+
+                # Update Bill
+                bill = Bill(supplier = supplier, start_date = start_date,
+                            end_date = end_date, amount = amount)
+
+                bill.save()
+
+            # Find all suppliers who delivered service between the given
+            context = {"bill_generate" : date_selector}
 
         return render(request, 'milk/milk.html', context)
 

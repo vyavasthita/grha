@@ -5,13 +5,39 @@
 
 {% block base %}
     {% if milk_view %}
-        <div class="card" style="width: 18rem; margin-top:20px">
-            <img src="{% static 'milk/images/cow.jpeg' %}" class="card-img-top" width="50" height="50" loading="lazy" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">{% trans "Supply" %}</h5>
-                <p class="card-text">To View and update milk supply.</p>
-                <a href="{% url 'supply_view' %}" class="btn btn-primary">{% trans "View" %}</a>
-                <a href="{% url 'supply_update' %}" class="btn btn-primary">{% trans "Update" %}</a>
+        <div class="row">
+            <div class="col">
+                <div class="card" style="width: 18rem; margin-top:20px">
+                    <img src="{% static 'milk/images/cow.jpeg' %}" class="card-img-top" width="50" height="50" loading="lazy" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">{% trans "Supply" %}</h5>
+                        <p class="card-text">To View and update milk supply.</p>
+                        <a href="{% url 'supply_view' %}" class="btn btn-primary">{% trans "View" %}</a>
+                        <a href="{% url 'supply_update' %}" class="btn btn-primary">{% trans "Update" %}</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem; margin-top:20px">
+                    <img src="{% static 'milk/images/bill.png' %}" class="card-img-top" width="50" height="50" loading="lazy" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">{% trans "Bill" %}</h5>
+                        <p class="card-text">To view and generate milk Bill.</p>
+                        <a href="{% url 'bill_view' %}" class="btn btn-primary">{% trans "View" %}</a>
+                        <a href="{% url 'bill_generate' %}" class="btn btn-primary">{% trans "Generate" %}</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem; margin-top:20px">
+                    <img src="{% static 'milk/images/inr.jpg' %}" class="card-img-top" width="50" height="50" loading="lazy" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">{% trans "Payment" %}</h5>
+                        <p class="card-text">To view and make payment.</p>
+                        <a href="{% url 'supply_view' %}" class="btn btn-primary">{% trans "View" %}</a>
+                        <a href="{% url 'supply_update' %}" class="btn btn-primary">{% trans "Pay" %}</a>
+                    </div>
+                </div>
             </div>
         </div>
     {% elif supply_view %}
@@ -56,6 +82,42 @@
                 {{ supply_update }}
                 <button type="submit" class="btn btn-primary btn-sm">
                     Add Supply
+                </button>
+            </form>
+        </div>
+    {% elif bill_view %}
+        <div class = "container">
+            <table class="table-responsive-sm table-sm table-dark table-striped table-bordered table-hover" style="margin-top: 5px">
+                <caption> {% trans "Milk Bill" %} </caption>
+                <thead class="thead-dark">
+                    <tr class="bg-primary">
+                        <th scope="col">#</th>
+                        <th scope="col">{% trans 'Supplier'%}</th>
+                        <th scope="col">{% trans 'Start Date'%}</th>
+                        <th scope="col">{% trans 'End Date'%}</th>
+                        <th scope="col">{% trans 'Amount'%}</th>
+                    </tr>
+                </thead>
+                {% for bill in bill_view %}
+                    <tbody>
+                        <tr>
+                            <th scope="row">{{ forloop.counter }}</th>
+                            <td>{{ bill.supplier }}</td>
+                            <td>{{ bill.start_date }}</td>
+                            <td>{{ bill.end_date }}</td>
+                            <td>{{ bill.amount }}</td>
+                        </tr>
+                    </tbody>
+                {% endfor %}
+            </table>
+        </div>
+    {% elif bill_generate %}
+        <div style="text-align:left; margin-top:20px">
+            <form action="{% url 'bill_generate' %}" method="post">
+                {% csrf_token %}
+                {{ bill_generate }}
+                <button type="submit" class="btn btn-primary btn-sm">
+                    Generate Bill
                 </button>
             </form>
         </div>
