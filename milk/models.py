@@ -2,8 +2,8 @@ from django.db import models
 
 
 class Supplier(models.Model):
-    name            =       models.CharField(max_length=30)
-    phone           =       models.CharField(max_length=16)
+    name            =       models.CharField(max_length=30, unique=True)
+    phone           =       models.CharField(max_length=16, unique=True)
     address         =       models.CharField(max_length=300)
 
     def __str__(self):
@@ -23,6 +23,8 @@ class Service(models.Model):
     quantity        =       models.FloatField()
     rate            =       models.ForeignKey(Rate, on_delete=models.CASCADE)
     remark          =       models.CharField(max_length=100, blank = True, null=True)
+
+    supplier.unique_for_date = "date"
 
     def __str__(self):
         return str(self.supplier) + '_' + str(self.date)
