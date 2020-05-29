@@ -29,6 +29,7 @@ class MilkView(View):
 class SupplyView(View):
     class ServiceDetail:
         def __init__(self):
+            self.id = ''
             self.supplier = ''
             self.date = ''
             self.quantity = ''
@@ -68,6 +69,7 @@ class SupplyView(View):
             date__lte = self.end_date).order_by('date'):
             service_detail              =   SupplyView.ServiceDetail()
 
+            service_detail.id           =   service.id
             service_detail.supplier     =   service.supplier.name
             service_detail.date         =   service.date
             service_detail.quantity     =   service.quantity
@@ -78,7 +80,7 @@ class SupplyView(View):
         return {"view_type" : ViewType.SUPPLY_VIEW, 'supply_view' : service_details, "date_selector" : date_selector}
 
 
-class SupplyUpdateView(View):
+class SupplyAddView(View):
     def get(self, request):
         update_form = SupplyUpdateForm()
 
@@ -97,6 +99,28 @@ class SupplyUpdateView(View):
 
         return render(request, 'milk/milk.html', context)
 
+
+class SupplyUpdateView(View):
+    def get(self, request, pk):
+        
+        suppy = Service.objects.get(id = pk)
+
+        update_form = SupplyUpdateForm(instance=suppy)
+
+        context = {"view_type" : ViewType.SUPPLY_UPDATE, "supply_update" : update_form}
+
+        return render(request, 'milk/milk.html', context)
+
+    def post(self, request):
+        context = dict()
+
+        update_form = SupplyUpdateForm(request.POST)
+
+        if update_form.is_valid():
+            update_form.save()
+            context = {"view_type" : ViewType.SUPPLY_UPDATE, "supply_update" : update_form}
+
+        return render(request, 'milk/milk.html', context)
 
 class BillView(View):
     class BillDetail:

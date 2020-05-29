@@ -10,8 +10,8 @@ class DateSelectForm(forms.Form):
 class SupplyUpdateForm(forms.ModelForm):
     class Meta:
         model = Service
-        fields = '__all__' #['supplier', 'date', 'quantity', 'rate', 'remark']
+        fields = '__all__'
     
         widgets = {
-                'date': forms.DateInput(format=('%m/%d/%Y'), attrs={'type':'date'}),
+                'date': forms.DateInput(format=('Y-%m-%d'), attrs={'type':'date'}),
             }

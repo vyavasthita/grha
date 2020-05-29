@@ -13,7 +13,6 @@
                         <h5 class="card-title">{% trans "Supply" %}</h5>
                         <p class="card-text">To View and update milk supply.</p>
                         <a href="{% url 'supply_view' %}" class="btn btn-primary">{% trans "View" %}</a>
-                        <a href="{% url 'supply_update' %}" class="btn btn-primary">{% trans "Update" %}</a>
                     </div>
                 </div>
             </div>
@@ -51,6 +50,7 @@
                     </button>
                 </form>
             </div>
+            <a href="{% url 'supply_add' %}" class="btn btn-primary">{% trans "Add Supply" %}</a>
             <table class="table-responsive-sm table-sm table-dark table-striped table-bordered table-hover" style="margin-top: 5px">
                 <caption> {% trans "Milk Supply" %} </caption>
                 <thead class="thead-dark">
@@ -70,6 +70,9 @@
                             <td>{{ service.date }}</td>
                             <td>{{ service.quantity }}</td>
                             <td>{{ service.remark }}</td>
+                            <td>
+                                <a href="{% url 'supply_update' service.id %}" class="btn btn-primary">{% trans "Edit" %}</a>
+                            </td>                            
                         </tr>
                     </tbody>
                 {% endfor %}
@@ -81,7 +84,7 @@
                 {% csrf_token %}
                 {{ supply_update }}
                 <button type="submit" class="btn btn-primary btn-sm">
-                    Add Supply
+                    Update
                 </button>
             </form>
         </div>
