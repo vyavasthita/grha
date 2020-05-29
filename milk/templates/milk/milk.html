@@ -7,8 +7,8 @@
     {% if view_type == 1 %}
         <div class="row">
             <div class="col">
-                <div class="card" style="width: 18rem; margin-top:20px">
-                    <img src="{% static 'milk/images/cow.jpeg' %}" class="card-img-top" width="50" height="50" loading="lazy" alt="Card image cap">
+                <div class="card text-white bg-dark mb-3 border-primary mb-3" style="width: 18rem; margin-top:20px">
+                    <img src="{% static 'milk/images/supply.jpg' %}" class="card-img-top" width="100%" height="50%" object-fit="cover" loading="lazy" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">{% trans "Supply" %}</h5>
                         <p class="card-text">To View and update milk supply.</p>
@@ -17,8 +17,8 @@
                 </div>
             </div>
             <div class="col">
-                <div class="card" style="width: 18rem; margin-top:20px">
-                    <img src="{% static 'milk/images/bill.png' %}" class="card-img-top" width="50" height="50" loading="lazy" alt="Card image cap">
+                <div class="card bg-danger mb-3 border-success mb-3" style="width: 18rem; margin-top:20px">
+                    <img src="{% static 'milk/images/bill.png' %}" class="card-img-top" width="100%" height="50%" loading="lazy" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">{% trans "Bill" %}</h5>
                         <p class="card-text">To view and generate milk Bill.</p>
@@ -28,8 +28,8 @@
                 </div>
             </div>
             <div class="col">
-                <div class="card" style="width: 18rem; margin-top:20px">
-                    <img src="{% static 'milk/images/inr.jpg' %}" class="card-img-top" width="50" height="50" loading="lazy" alt="Card image cap">
+                <div class="card bg-success mb-3 border-warning mb-3" style="width: 18rem; margin-top:20px">
+                    <img src="{% static 'milk/images/inr.jpg' %}" class="card-img-top" width="100%" height="50%" loading="lazy" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">{% trans "Payment" %}</h5>
                         <p class="card-text">To view and make payment.</p>
