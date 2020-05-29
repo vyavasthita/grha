@@ -4,7 +4,7 @@
 
 
 {% block base %}
-    {% if milk_view %}
+    {% if view_type == 1 %}
         <div class="row">
             <div class="col">
                 <div class="card" style="width: 18rem; margin-top:20px">
@@ -40,7 +40,7 @@
                 </div>
             </div>
         </div>
-    {% elif supply_view %}
+    {% elif view_type == 2 %}
         <div class = "container">
             <div style="text-align:left; margin-top:20px">
                 <form action="{% url 'supply_view' %}" method="post">
@@ -75,7 +75,7 @@
                 {% endfor %}
             </table>
         </div>
-    {% elif supply_update %}
+    {% elif view_type == 3 %}
         <div style="text-align:left; margin-top:20px">
             <form action="{% url 'supply_update' %}" method="post">
                 {% csrf_token %}
@@ -85,7 +85,7 @@
                 </button>
             </form>
         </div>
-    {% elif bill_view %}
+    {% elif view_type == 4 %}
         <div class = "container">
             <table class="table-responsive-sm table-sm table-dark table-striped table-bordered table-hover" style="margin-top: 5px">
                 <caption> {% trans "Milk Bill" %} </caption>
@@ -111,7 +111,7 @@
                 {% endfor %}
             </table>
         </div>
-    {% elif bill_generate %}
+    {% elif view_type == 5 %}
         <div style="text-align:left; margin-top:20px">
             <form action="{% url 'bill_generate' %}" method="post">
                 {% csrf_token %}
@@ -121,7 +121,7 @@
                 </button>
             </form>
         </div>
-    {% elif payment_view %}
+    {% elif view_type == 6 %}
         <div class = "container">
             <div style="text-align:left; margin-top:20px">
                 <form action="{% url 'payment_view' %}" method="post">
