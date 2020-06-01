@@ -15,6 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.conf.urls.i18n import i18n_patterns
+from django.conf import settings
+from django.conf.urls.static import static
 from django.urls import path, include
 
 
@@ -28,9 +30,11 @@ urlpatterns = [
     path('', include('home.homeurls', namespace='nshome'))
 ]
 
-# Pattern for language like /hi/milk
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+# Pattern for language like /<language_code>/milk
 urlpatterns += i18n_patterns(
 )
-
 
 # https://www.youtube.com/watch?v=YT60BZJjySg
