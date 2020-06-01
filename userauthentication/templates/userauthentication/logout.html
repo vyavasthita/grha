@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+
+{% block base %}
+    <h2>You have been logged out successfully.</h2>
+    <div class="border-top pt-3">
+        <small class="text-muted">
+            <a href="{% url 'nsuserauthentication:login' %}">{% trans "Log In Again" %}</a>
+        </small>
+    </div>
+{% endblock base %}
+
+{% block messages %}
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+{% endblock messages %}
+

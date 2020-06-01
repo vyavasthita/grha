@@ -157,3 +157,8 @@ django_heroku.settings(locals())
 # https://simpleisbetterthancomplex.com/tutorial/2018/11/28/advanced-form-rendering-with-django-crispy-forms.html
 # https://www.youtube.com/watch?v=q4jPR-M0TAQ&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p&index=6
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+# https://www.youtube.com/watch?v=3aVqWaLjqS4&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p&index=7
+LOGIN_REDIRECT_URL = 'nsuserauthentication:profile'
+
+LOGIN_URL = 'nsuserauthentication:login'

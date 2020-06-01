@@ -5,22 +5,22 @@
 
 {% block base %}
     <div class="content-section">
-        <form action="{% url 'nsuserauthentication:register' %}" method="post">
+        <form action="{% url 'nsuserauthentication:login' %}" method="post">
             {% csrf_token %}
             <fieldset class="form-group">
                 <legend class="border-bottom mb-4">
-                    {% trans "Join Today" %}
+                    {% trans "Sign In" %}
                 </legend>
-                {{ user_creation_form | crispy }}
+                {{ form | crispy }}
             </fieldset>
             <div class="form-group">
-                <button type="submit" class="btn btn-outline-info">Sign Up</button>
+                <button type="submit" class="btn btn-outline-info">Sign In</button>
             </div>
         </form>
         <div class="border-top pt-3">
             <small class="text-muted">
-                {% trans "Already have an account?" %}
-                <a href="#" class ="ml-2">{% trans "Sign In" %}</a>
+                {% trans "Need an account?" %}
+                <a href="{% url 'nsuserauthentication:register' %}" class ="ml-2">{% trans "Sign Up" %}</a>
             </small>
         </div>
     </div>

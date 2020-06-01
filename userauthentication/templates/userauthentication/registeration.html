@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load i18n %}
+{% load static %}
+
+{% block base %}
+    <div class="content-section">
+        <form action="{% url 'nsuserauthentication:register' %}" method="post">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">
+                    {% trans "Join Today" %}
+                </legend>
+                {{ user_creation_form | crispy }}
+            </fieldset>
+            <div class="form-group">
+                <button type="submit" class="btn btn-outline-info">Sign Up</button>
+            </div>
+        </form>
+        <div class="border-top pt-3">
+            <small class="text-muted">
+                {% trans "Already have an account?" %}
+                <a href="{% url 'nsuserauthentication:login' %}" class ="ml-2">{% trans "Sign In" %}</a>
+            </small>
+        </div>
+    </div>
+{% endblock base %}
+
+{% block messages %}
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+{% endblock messages %}
+
