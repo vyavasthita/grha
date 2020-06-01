@@ -1,4 +1,5 @@
 # VS Code
+.idea
 .vscode
 !.vscode/settings.json
 !.vscode/tasks.json

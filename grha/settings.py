@@ -36,7 +36,9 @@ ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 INSTALLED_APPS = [
     'home.apps.HomeConfig',
     'milk.apps.MilkConfig',
+    'userauthentication.apps.UserauthenticationConfig',
     'tenancy.apps.TenancyConfig',
+    'crispy_forms',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -150,3 +152,8 @@ EMAIL_USE_TLS=True
 
 # Activate Django-Heroku.
 django_heroku.settings(locals())
+
+
+# https://simpleisbetterthancomplex.com/tutorial/2018/11/28/advanced-form-rendering-with-django-crispy-forms.html
+# https://www.youtube.com/watch?v=q4jPR-M0TAQ&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p&index=6
+CRISPY_TEMPLATE_PACK = 'bootstrap4'

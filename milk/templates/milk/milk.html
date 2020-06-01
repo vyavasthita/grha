@@ -12,7 +12,7 @@
                     <div class="card-body">
                         <h5 class="card-title">{% trans "Supply" %}</h5>
                         <p class="card-text">To View and update milk supply.</p>
-                        <a href="{% url 'supply_view' %}" class="btn btn-primary">{% trans "View" %}</a>
+                        <a href="{% url 'nsmilk:supply_view' %}" class="btn btn-primary">{% trans "View" %}</a>
                     </div>
                 </div>
             </div>
@@ -22,8 +22,8 @@
                     <div class="card-body">
                         <h5 class="card-title">{% trans "Bill" %}</h5>
                         <p class="card-text">To view and generate milk Bill.</p>
-                        <a href="{% url 'bill_view' %}" class="btn btn-primary">{% trans "View" %}</a>
-                        <a href="{% url 'bill_generate' %}" class="btn btn-primary">{% trans "Generate" %}</a>
+                        <a href="{% url 'nsmilk:bill_view' %}" class="btn btn-primary">{% trans "View" %}</a>
+                        <a href="{% url 'nsmilk:bill_generate' %}" class="btn btn-primary">{% trans "Generate" %}</a>
                     </div>
                 </div>
             </div>
@@ -33,8 +33,8 @@
                     <div class="card-body">
                         <h5 class="card-title">{% trans "Payment" %}</h5>
                         <p class="card-text">To view and make payment.</p>
-                        <a href="{% url 'payment_view' %}" class="btn btn-primary">{% trans "View" %}</a>
-                        <a href="{% url 'payment_pay' %}" class="btn btn-primary">{% trans "Pay" %}</a>
+                        <a href="{% url 'nsmilk:payment_view' %}" class="btn btn-primary">{% trans "View" %}</a>
+                        <a href="{% url 'nsmilk:payment_pay' %}" class="btn btn-primary">{% trans "Pay" %}</a>
                     </div>
                 </div>
             </div>
@@ -42,7 +42,7 @@
     {% elif view_type == 2 %}
         <div class = "container">
             <div style="text-align:left; margin-top:20px">
-                <form action="{% url 'supply_view' %}" method="post">
+                <form action="{% url 'nsmilk:supply_view' %}" method="post">
                     {% csrf_token %}
                     {{ date_selector }}
                     <button type="submit" class="btn btn-primary btn-sm">
@@ -50,7 +50,7 @@
                     </button>
                 </form>
             </div>
-            <a href="{% url 'supply_add' %}" class="btn btn-primary">{% trans "Add Supply" %}</a>
+            <a href="{% url 'nsmilk:supply_add' %}" class="btn btn-primary">{% trans "Add Supply" %}</a>
             <table class="table-responsive-sm table-sm table-dark table-striped table-bordered table-hover" style="margin-top: 5px">
                 <caption> {% trans "Milk Supply" %} </caption>
                 <thead class="thead-dark">
@@ -71,7 +71,7 @@
                             <td>{{ service.quantity }}</td>
                             <td>{{ service.remark }}</td>
                             <td>
-                                <a href="{% url 'supply_update' service.id %}" class="btn btn-primary">{% trans "Edit" %}</a>
+                                <a href="{% url 'nsmilk:supply_update' service.id %}" class="btn btn-primary">{% trans "Edit" %}</a>
                             </td>                            
                         </tr>
                     </tbody>
@@ -80,7 +80,7 @@
         </div>
     {% elif view_type == 3 %}
         <div style="text-align:left; margin-top:20px">
-            <form action="{% url 'supply_update' %}" method="post">
+            <form action="{% url 'nsmilk:supply_update' %}" method="post">
                 {% csrf_token %}
                 {{ supply_update }}
                 <button type="submit" class="btn btn-primary btn-sm">
@@ -116,7 +116,7 @@
         </div>
     {% elif view_type == 5 %}
         <div style="text-align:left; margin-top:20px">
-            <form action="{% url 'bill_generate' %}" method="post">
+            <form action="{% url 'nsmilk:bill_generate' %}" method="post">
                 {% csrf_token %}
                 {{ bill_generate }}
                 <button type="submit" class="btn btn-primary btn-sm">
@@ -127,7 +127,7 @@
     {% elif view_type == 6 %}
         <div class = "container">
             <div style="text-align:left; margin-top:20px">
-                <form action="{% url 'payment_view' %}" method="post">
+                <form action="{% url 'nsmilk:payment_view' %}" method="post">
                     {% csrf_token %}
                     {{ date_selector }}
                     <button type="submit" class="btn btn-primary btn-sm">

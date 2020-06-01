@@ -17,15 +17,20 @@ from django.contrib import admin
 from django.conf.urls.i18n import i18n_patterns
 from django.urls import path, include
 
+
 # Pattern without language like /milk
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('milk/', include('milk.milkurls')),
+    path('milk/', include('milk.milkurls', namespace = 'nsmilk')),
+    path('userauthentication/', include('userauthentication.userauthenticationurls', namespace='nsuserauthentication')),
     path('tenancy/', include('tenancy.tenancyurls')),
     path('i18n/', include('django.conf.urls.i18n')),
-    path('', include('home.homeurls'))
+    path('', include('home.homeurls', namespace='nshome'))
 ]
 
 # Pattern for language like /hi/milk
 urlpatterns += i18n_patterns(
 )
+
+
+# https://www.youtube.com/watch?v=YT60BZJjySg
