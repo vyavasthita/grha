@@ -14,6 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+from django.contrib.auth import views as auth_views
 from django.conf.urls.i18n import i18n_patterns
 from django.conf import settings
 from django.conf.urls.static import static
@@ -27,7 +28,19 @@ urlpatterns = [
     path('userauthentication/', include('userauthentication.userauthenticationurls', namespace='nsuserauthentication')),
     path('tenancy/', include('tenancy.tenancyurls')),
     path('i18n/', include('django.conf.urls.i18n')),
-    path('', include('home.homeurls', namespace='nshome'))
+    path('', include('home.homeurls', namespace='nshome')),
+    path('password-reset/', auth_views.PasswordResetView.as_view(
+                template_name="userauthentication/password_reset.html"), 
+                name='password_reset'),
+    path('password-reset-confirm/<uidb64>/<token>/', auth_views.PasswordResetConfirmView.as_view(
+                template_name="userauthentication/password_reset_confirm.html"), 
+                name='password_reset_confirm'),
+    path('password-reset/done', auth_views.PasswordResetDoneView.as_view(
+                template_name="userauthentication/password_reset_done.html"), 
+                name='password_reset_done'),
+    path('password-reset-complete/', auth_views.PasswordResetCompleteView.as_view(
+                template_name="userauthentication/password_reset_complete.html"), 
+                name='password_reset_complete'),
 ]
 
 if settings.DEBUG:
