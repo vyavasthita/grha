@@ -72,7 +72,7 @@
                     </a>
                 {% endif %}
             </div>
-            <div class="btn-header">
+            <div class="btn-header" style="padding-left:5px;">
                 <form action="{% url 'set_language' %}" method="post">
                     {% csrf_token %}
                     <input name="next" type="hidden" value="{{ redirect_to }}" />
@@ -81,7 +81,7 @@
                         {% get_language_info_list for LANGUAGES as languages %}
                         {% for language in languages %}
                             <button type="submit" name="language" value="{{ language.code }}"
-                                class="btn btn-primary btn-sm">
+                                class="btn btn-secondary btn-sm">
                                 {{ language.name_translated }} ({{ language.code }})
                             </button>
                         {% endfor %}
@@ -90,11 +90,13 @@
         </nav>
         {% block messages %}
         {% endblock %}
-
         {% block base %}
         {% endblock %}
     </div>
-
+    {% block contact %}
+    {% endblock %}
+    {% block accounts %}
+    {% endblock %}
     <div>
         {% include "footer.html" %}
     </div>

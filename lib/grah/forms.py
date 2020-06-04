@@ -25,4 +25,4 @@ class ContactForm(forms.Form):
                                     {
                                         "placeholder" : "Enter your email address."
                                     }))
-    cc_myself       =   forms.BooleanField(required = False)
+    cc_yourself       =   forms.BooleanField(required = False)

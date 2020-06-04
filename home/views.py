@@ -19,14 +19,14 @@ def contact(request):
             # ...
             # redirect to a new URL:
     
-            subject     =   contact.cleaned_data['subject']
-            message     =   contact.cleaned_data['message']
-            sender      =   contact.cleaned_data['sender']
-            cc_myself   =   contact.cleaned_data['cc_myself']
+            subject         =   contact.cleaned_data['subject']
+            message         =   contact.cleaned_data['message']
+            sender          =   contact.cleaned_data['sender']
+            cc_yourself     =   contact.cleaned_data['cc_yourself']
             
             recipients = config('EMAIL_RECIPIENTS', cast=Csv())
 
-            if cc_myself:
+            if cc_yourself:
                 recipients.append(sender)
 
             send_mail(subject, message, sender, recipients)

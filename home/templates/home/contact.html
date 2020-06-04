@@ -1,16 +1,12 @@
 {% extends 'base.html' %}
-<!doctype html>
-<html lang="en">
-  <head>
-    <title>Contact Us</title>
-  </head>
-  <body>
-    {% block base %}
+{% load crispy_forms_tags %}
+
+{% block contact %}
+  <div class="container-sm p-3 my-5 bg-dark text-white" style="width:500px">
     <form action="{% url 'nshome:contact' %}" method = "post">
       {% csrf_token %}
-      {{ contact.as_p }}
+      {{ contact | crispy }}
       <input type="submit" value="Submit">
     </form>
-    {% endblock base %}
-</body>
-</html>
+  </div>
+{% endblock contact %}

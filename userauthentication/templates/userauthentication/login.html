@@ -3,8 +3,8 @@
 {% load i18n %}
 {% load static %}
 
-{% block base %}
-    <div class="content-section">
+{% block accounts %}
+    <div class="content-section container-sm p-3 my-5 bg-dark text-white" style="width:500px">
         <form action="{% url 'nsuserauthentication:login' %}" method="post">
             {% csrf_token %}
             <fieldset class="form-group">
@@ -27,7 +27,7 @@
             </small>
         </div>
     </div>
-{% endblock base %}
+{% endblock accounts %}
 
 {% block messages %}
     {% include "messages.html" %}
