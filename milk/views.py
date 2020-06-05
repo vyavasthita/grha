@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import Supplier, Service, Bill, Payment
-from datetime import datetime
+from datetime import datetime, date
 from calendar import monthrange
 from django.views import View
 from .forms import DateSelectForm, SupplyUpdateForm
@@ -136,8 +136,8 @@ class BillView(View):
         self.template_name = 'milk/milk.html'
         self.form_class = DateSelectForm
         
-        self.start_date = datetime.today().replace(day=1)
-        self.end_date = last_day_of_month(datetime.today().date())
+        self.start_date = date(date.today().year, 1, 1)
+        self.end_date = date(date.today().year, 12, 31)
 
     def get(self, request):
         date_selector = self.form_class()

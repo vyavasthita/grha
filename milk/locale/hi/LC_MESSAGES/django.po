@@ -80,7 +80,7 @@ msgstr "टिप्पणी"
 
 #: milk/templates/milk/milk.html:80
 msgid "Edit"
-msgstr "संपादित करें"
+msgstr "संपादित"
 
 #: milk/templates/milk/milk.html:96
 msgid "Update"
