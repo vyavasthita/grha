@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-05 14:46+1000\n"
+"POT-Creation-Date: 2020-06-05 20:03+1000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,7 +33,7 @@ msgstr "ಸರಬರಾಜುದಾರ"
 msgid "View"
 msgstr "ನೋಟ"
 
-#: milk/templates/milk/milk.html:24 milk/templates/milk/milk.html:103
+#: milk/templates/milk/milk.html:24 milk/templates/milk/milk.html:104
 msgid "Bill"
 msgstr "ಬಿಲ್"
 
@@ -53,7 +53,7 @@ msgstr "ಪಾವತಿ"
 msgid "Add Supply"
 msgstr "ಸರಬರಾಜು ಸೇರಿಸಿ"
 
-#: milk/templates/milk/milk.html:53 milk/templates/milk/milk.html:145
+#: milk/templates/milk/milk.html:53 milk/templates/milk/milk.html:146
 msgid "Search"
 msgstr "ಹುಡುಕಿ"
 
@@ -61,8 +61,8 @@ msgstr "ಹುಡುಕಿ"
 msgid "Milk Supply"
 msgstr "ಹಾಲು ಸರಬರಾಜು"
 
-#: milk/templates/milk/milk.html:65 milk/templates/milk/milk.html:107
-#: milk/templates/milk/milk.html:157
+#: milk/templates/milk/milk.html:65 milk/templates/milk/milk.html:108
+#: milk/templates/milk/milk.html:158
 msgid "Supplier"
 msgstr "ಸರಬರಾಜುದಾರ"
 
@@ -78,45 +78,49 @@ msgstr "ಪ್ರಮಾಣ"
 msgid "Remark"
 msgstr "ಟೀಕೆ"
 
-#: milk/templates/milk/milk.html:80
+#: milk/templates/milk/milk.html:69
+msgid "Action"
+msgstr "ಕ್ರಿಯೆ"
+
+#: milk/templates/milk/milk.html:81
 msgid "Edit"
 msgstr "ತಿದ್ದು"
 
-#: milk/templates/milk/milk.html:96
+#: milk/templates/milk/milk.html:97
 msgid "Update"
 msgstr "ನವೀಕರಿಸಿ"
 
-#: milk/templates/milk/milk.html:108
+#: milk/templates/milk/milk.html:109
 msgid "Start Date"
 msgstr "ಪ್ರಾರಂಭ ದಿನಾಂಕ"
 
-#: milk/templates/milk/milk.html:109
+#: milk/templates/milk/milk.html:110
 msgid "End Date"
 msgstr "ಅಂತಿಮ ದಿನಾಂಕ"
 
-#: milk/templates/milk/milk.html:110 milk/templates/milk/milk.html:158
+#: milk/templates/milk/milk.html:111 milk/templates/milk/milk.html:159
 msgid "Amount"
 msgstr "ಮೊತ್ತ"
 
-#: milk/templates/milk/milk.html:132
+#: milk/templates/milk/milk.html:133
 msgid "Generate Bill"
 msgstr "ಬಿಲ್ ರಚಿಸಿ"
 
-#: milk/templates/milk/milk.html:153
+#: milk/templates/milk/milk.html:154
 msgid "Payment View"
 msgstr "ಪಾವತಿ ವೀಕ್ಷಣೆ"
 
-#: milk/templates/milk/milk.html:159
+#: milk/templates/milk/milk.html:160
 #, fuzzy
 #| msgid "Start Date"
 msgid "Payment Date"
 msgstr "ಪ್ರಾರಂಭ ದಿನಾಂಕ"
 
-#: milk/templates/milk/milk.html:160
+#: milk/templates/milk/milk.html:161
 msgid "Remaining Amount"
 msgstr "ಉಳಿದ ಹಣ"
 
-#: milk/templates/milk/milk.html:161
+#: milk/templates/milk/milk.html:162
 #, fuzzy
 #| msgid "Remark"
 msgid "Remaks"
