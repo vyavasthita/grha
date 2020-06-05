@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-26 15:15+1000\n"
+"POT-Creation-Date: 2020-06-05 14:46+1000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,15 +18,19 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: grha/settings.py:122
+#: grha/settings.py:124
 msgid "Hindi"
 msgstr "हिन्दी"
 
-#: grha/settings.py:123
+#: grha/settings.py:125
 msgid "Kannada"
-msgstr "कन्नड़"
+msgstr "ಕನ್ನಡ"
 
-#: grha/settings.py:124
+#: grha/settings.py:126
+msgid "German"
+msgstr "Deutsche"
+
+#: grha/settings.py:127
 msgid "English"
 msgstr "English"
 
@@ -38,39 +42,39 @@ msgstr "साइट व्यवस्थापक"
 msgid "Home Work"
 msgstr "गृह कार्य"
 
-#: templates/base.html:28
+#: templates/base.html:27
 msgid "Home"
 msgstr "गृह"
 
-#: templates/base.html:31
+#: templates/base.html:30
 msgid "Milk"
 msgstr "दूध"
 
-#: templates/base.html:34
+#: templates/base.html:33
 msgid "Tenancy"
 msgstr "किरायेदार"
 
-#: templates/base.html:37
+#: templates/base.html:36
 msgid "Money"
 msgstr "पैसे"
 
-#: templates/base.html:41
+#: templates/base.html:40
 msgid "Connections"
 msgstr "कनेक्शन"
 
-#: templates/base.html:44
+#: templates/base.html:43
 msgid "Water"
 msgstr "जल"
 
-#: templates/base.html:45
+#: templates/base.html:44
 msgid "Electricity"
 msgstr "विधुत"
 
-#: templates/base.html:46
+#: templates/base.html:45
 msgid "Gas"
 msgstr "गैस"
 
-#: templates/base.html:47
+#: templates/base.html:46
 msgid "Tata Sky"
 msgstr "टाटा स्काई"
 
@@ -78,9 +82,67 @@ msgstr "टाटा स्काई"
 msgid "Others"
 msgstr "अन्य"
 
-#: templates/base.html:53
-msgid "Disabled"
-msgstr "अक्षम"
+#: templates/base.html:61
+msgid "Profile"
+msgstr "प्रोफ़ाइल"
+
+#: templates/base.html:64
+msgid "Log Out"
+msgstr "लॉग आउट"
+
+#: templates/base.html:68
+msgid "Sign In"
+msgstr "साइन इन"
+
+#: templates/base.html:71
+msgid "Sign Up"
+msgstr "साइन अप"
+
+#: templates/footer.html:10
+msgid "About"
+msgstr "बारे में"
+
+#: templates/footer.html:14
+msgid "Contact Us"
+msgstr "संपर्क करें"
+
+#: templates/footer.html:19
+msgid "About Us"
+msgstr "हमारे बारे में"
+
+#: templates/footer.html:25
+msgid "Help"
+msgstr "सहायता"
+
+#~ msgid "Forgot Password?"
+#~ msgstr "पासवर्ड भूल गए?"
+
+#~ msgid "Need an account?"
+#~ msgstr "एक खाता चाहिए?"
+
+#~ msgid "Log In Again"
+#~ msgstr "फिर से लॉगिन करें"
+
+#~ msgid "Password Request"
+#~ msgstr "पासवर्ड का अनुरोध"
+
+#~ msgid "Request Password Reset"
+#~ msgstr "पासवर्ड रीसेट का अनुरोध करें"
+
+#~ msgid "Reset Password"
+#~ msgstr "पासवर्ड रीसेट"
+
+#~ msgid "Profile Info"
+#~ msgstr "प्रोफ़ाइल जानकारी"
+
+#~ msgid "Update"
+#~ msgstr "अपडेट करें"
+
+#~ msgid "Already have an account?"
+#~ msgstr "क्या पहले से एक खाता उपलब्ध है"
+
+#~ msgid "Disabled"
+#~ msgstr "अक्षम"
 
 #~ msgid "Search"
 #~ msgstr "खोज"

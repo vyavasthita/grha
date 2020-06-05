@@ -123,6 +123,7 @@ LOCALE_PATHS = (
 LANGUAGES = (
     ('hi', _('Hindi')),
     ('kn', _('Kannada')),
+    ('de', _('German')),
     ('en', _('English')),
 )
 

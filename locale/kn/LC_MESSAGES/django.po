@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-26 15:16+1000\n"
+"POT-Creation-Date: 2020-06-05 14:46+1000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,15 +18,19 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: grha/settings.py:122
+#: grha/settings.py:124
 msgid "Hindi"
 msgstr "हिन्दी"
 
-#: grha/settings.py:123
+#: grha/settings.py:125
 msgid "Kannada"
 msgstr "ಕನ್ನಡ"
 
-#: grha/settings.py:124
+#: grha/settings.py:126
+msgid "German"
+msgstr "Deutsche"
+
+#: grha/settings.py:127
 msgid "English"
 msgstr "English"
 
@@ -38,39 +42,39 @@ msgstr "ಜಾಂಗೊ ಸೈಟ್ ನಿರ್ವಾಹಕ"
 msgid "Home Work"
 msgstr "ಮನೆ ಕೆಲಸ"
 
-#: templates/base.html:28
+#: templates/base.html:27
 msgid "Home"
 msgstr "ಮನೆ"
 
-#: templates/base.html:31
+#: templates/base.html:30
 msgid "Milk"
 msgstr "ಹಾಲು"
 
-#: templates/base.html:34
+#: templates/base.html:33
 msgid "Tenancy"
 msgstr "ಬಾಡಿಗೆದಾರ"
 
-#: templates/base.html:37
+#: templates/base.html:36
 msgid "Money"
 msgstr "ಹಣ"
 
-#: templates/base.html:41
+#: templates/base.html:40
 msgid "Connections"
 msgstr "ಸಂಪರ್ಕ"
 
-#: templates/base.html:44
+#: templates/base.html:43
 msgid "Water"
 msgstr "ನೀರು"
 
-#: templates/base.html:45
+#: templates/base.html:44
 msgid "Electricity"
 msgstr "ವಿದ್ಯುತ್"
 
-#: templates/base.html:46
+#: templates/base.html:45
 msgid "Gas"
 msgstr "ಅನಿಲ"
 
-#: templates/base.html:47
+#: templates/base.html:46
 msgid "Tata Sky"
 msgstr "ಟಾಟಾ ಸ್ಕೈ"
 
@@ -78,9 +82,67 @@ msgstr "ಟಾಟಾ ಸ್ಕೈ"
 msgid "Others"
 msgstr "ಇತರರು"
 
-#: templates/base.html:53
-msgid "Disabled"
-msgstr "ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಲಾಗಿದೆ"
+#: templates/base.html:61
+msgid "Profile"
+msgstr "ಪ್ರೊಫೈಲ್"
+
+#: templates/base.html:64
+msgid "Log Out"
+msgstr "ಲಾಗ್ ಔಟ್"
+
+#: templates/base.html:68
+msgid "Sign In"
+msgstr "ಸೈನ್ ಇನ್ ಮಾಡಿ"
+
+#: templates/base.html:71
+msgid "Sign Up"
+msgstr "ಸೈನ್ ಅಪ್ ಮಾಡಿ"
+
+#: templates/footer.html:10
+msgid "About"
+msgstr "ಸುಮಾರು"
+
+#: templates/footer.html:14
+msgid "Contact Us"
+msgstr "ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ"
+
+#: templates/footer.html:19
+msgid "About Us"
+msgstr "ನಮ್ಮ ಬಗ್ಗೆ"
+
+#: templates/footer.html:25
+msgid "Help"
+msgstr "ಸಹಾಯ"
+
+#~ msgid "Forgot Password?"
+#~ msgstr "ಪಾಸ್ವರ್ಡ್ ಮರೆತಿರಾ?"
+
+#~ msgid "Need an account?"
+#~ msgstr "ಖಾತೆ ಬೇಕು?"
+
+#~ msgid "Log In Again"
+#~ msgstr "ಮತ್ತೆ ಲಾಗ್ ಇನ್ ಮಾಡಿ"
+
+#~ msgid "Password Request"
+#~ msgstr "ಪಾಸ್ವರ್ಡ್ ವಿನಂತಿ"
+
+#~ msgid "Request Password Reset"
+#~ msgstr "ಪಾಸ್ವರ್ಡ್ ಮರುಹೊಂದಿಸಲು ವಿನಂತಿಸಿ"
+
+#~ msgid "Reset Password"
+#~ msgstr "ಪಾಸ್ವರ್ಡ್ ಮರುಹೊಂದಿಸಿ"
+
+#~ msgid "Profile Info"
+#~ msgstr "ಪ್ರೊಫೈಲ್ ಮಾಹಿತಿ"
+
+#~ msgid "Update"
+#~ msgstr "ನವೀಕರಿಸಿ"
+
+#~ msgid "Already have an account?"
+#~ msgstr "ಈಗಾಗಲೇ ಖಾತೆ ಹೊಂದಿದ್ದೀರ?"
+
+#~ msgid "Disabled"
+#~ msgstr "ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಲಾಗಿದೆ"
 
 #~ msgid "Search"
 #~ msgstr "ಹುಡುಕಿ"

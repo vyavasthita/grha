@@ -1,0 +1,67 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-05 14:46+1000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+#: userauthentication/templates/userauthentication/login.html:12
+#: userauthentication/templates/userauthentication/login.html:17
+#: userauthentication/templates/userauthentication/password_reset_complete.html:8
+#: userauthentication/templates/userauthentication/registeration.html:20
+msgid "Sign In"
+msgstr "साइन इन"
+
+#: userauthentication/templates/userauthentication/login.html:19
+msgid "Forgot Password?"
+msgstr "पासवर्ड भूल गए?"
+
+#: userauthentication/templates/userauthentication/login.html:25
+msgid "Need an account?"
+msgstr "एक खाता चाहिए?"
+
+#: userauthentication/templates/userauthentication/login.html:26
+#: userauthentication/templates/userauthentication/registeration.html:14
+msgid "Sign Up"
+msgstr "साइन अप"
+
+#: userauthentication/templates/userauthentication/logout.html:9
+msgid "Log In Again"
+msgstr "फिर से लॉगिन करें"
+
+#: userauthentication/templates/userauthentication/password_reset.html:12
+#: userauthentication/templates/userauthentication/password_reset_confirm.html:12
+msgid "Password Request"
+msgstr "पासवर्ड का अनुरोध"
+
+#: userauthentication/templates/userauthentication/password_reset.html:17
+msgid "Request Password Reset"
+msgstr "पासवर्ड रीसेट का अनुरोध करें"
+
+#: userauthentication/templates/userauthentication/password_reset_confirm.html:17
+msgid "Reset Password"
+msgstr "पासवर्ड रीसेट"
+
+#: userauthentication/templates/userauthentication/profile.html:18
+msgid "Profile Info"
+msgstr "प्रोफ़ाइल जानकारी"
+
+#: userauthentication/templates/userauthentication/profile.html:24
+msgid "Update"
+msgstr "अपडेट करें"
+
+#: userauthentication/templates/userauthentication/registeration.html:19
+msgid "Already have an account?"
+msgstr "क्या पहले से एक खाता उपलब्ध है?"

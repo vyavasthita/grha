@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-24 14:15+1000\n"
+"POT-Creation-Date: 2020-06-05 14:46+1000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,17 +18,21 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: grha/settings.py:121 templates/base.html:65
-msgid "English"
-msgstr "English"
-
-#: grha/settings.py:122 templates/base.html:68
+#: grha/settings.py:124
 msgid "Hindi"
 msgstr "हिन्दी"
 
-#: grha/settings.py:123 templates/base.html:71
+#: grha/settings.py:125
 msgid "Kannada"
 msgstr "ಕನ್ನಡ"
+
+#: grha/settings.py:126
+msgid "German"
+msgstr ""
+
+#: grha/settings.py:127
+msgid "English"
+msgstr "English"
 
 #: templates/admin/base_site.html:3
 msgid "Django site admin"
@@ -38,39 +42,39 @@ msgstr "Django site admin"
 msgid "Home Work"
 msgstr "Home Work"
 
-#: templates/base.html:28
+#: templates/base.html:27
 msgid "Home"
 msgstr "Home"
 
-#: templates/base.html:31
+#: templates/base.html:30
 msgid "Milk"
 msgstr "Milk"
 
-#: templates/base.html:34
+#: templates/base.html:33
 msgid "Tenancy"
 msgstr "Tenancy"
 
-#: templates/base.html:37
+#: templates/base.html:36
 msgid "Money"
 msgstr "Money"
 
-#: templates/base.html:41
+#: templates/base.html:40
 msgid "Connections"
 msgstr "Connections"
 
-#: templates/base.html:44
+#: templates/base.html:43
 msgid "Water"
 msgstr "Water"
 
-#: templates/base.html:45
+#: templates/base.html:44
 msgid "Electricity"
 msgstr "Electricity"
 
-#: templates/base.html:46
+#: templates/base.html:45
 msgid "Gas"
 msgstr "Gas"
 
-#: templates/base.html:47
+#: templates/base.html:46
 msgid "Tata Sky"
 msgstr "Tata Sky"
 
@@ -78,10 +82,40 @@ msgstr "Tata Sky"
 msgid "Others"
 msgstr "Others"
 
-#: templates/base.html:53
-msgid "Disabled"
-msgstr "Disabled"
+#: templates/base.html:61
+msgid "Profile"
+msgstr ""
 
-#: templates/base.html:74 templates/base.html:75
-msgid "Search"
-msgstr "Search"
+#: templates/base.html:64
+msgid "Log Out"
+msgstr ""
+
+#: templates/base.html:68
+msgid "Sign In"
+msgstr ""
+
+#: templates/base.html:71
+msgid "Sign Up"
+msgstr ""
+
+#: templates/footer.html:10
+msgid "About"
+msgstr ""
+
+#: templates/footer.html:14
+msgid "Contact Us"
+msgstr ""
+
+#: templates/footer.html:19
+msgid "About Us"
+msgstr ""
+
+#: templates/footer.html:25
+msgid "Help"
+msgstr ""
+
+#~ msgid "Disabled"
+#~ msgstr "Disabled"
+
+#~ msgid "Search"
+#~ msgstr "Search"

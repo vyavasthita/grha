@@ -1,0 +1,142 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-05 14:46+1000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: grha/settings.py:124
+msgid "Hindi"
+msgstr "हिन्दी"
+
+#: grha/settings.py:125
+msgid "Kannada"
+msgstr "ಕನ್ನಡ"
+
+#: grha/settings.py:126
+msgid "German"
+msgstr "Deutsche"
+
+#: grha/settings.py:127
+msgid "English"
+msgstr "English"
+
+#: templates/admin/base_site.html:3
+msgid "Django site admin"
+msgstr "Django Seite Administratorin"
+
+#: templates/base.html:13
+msgid "Home Work"
+msgstr "Hausaufgabe"
+
+#: templates/base.html:27
+msgid "Home"
+msgstr "Zuhause"
+
+#: templates/base.html:30
+msgid "Milk"
+msgstr "Milch"
+
+#: templates/base.html:33
+msgid "Tenancy"
+msgstr "Mietverhältnis"
+
+#: templates/base.html:36
+msgid "Money"
+msgstr "Geld"
+
+#: templates/base.html:40
+msgid "Connections"
+msgstr "Verbindungen"
+
+#: templates/base.html:43
+msgid "Water"
+msgstr "Wasser"
+
+#: templates/base.html:44
+msgid "Electricity"
+msgstr "Elektrizität"
+
+#: templates/base.html:45
+msgid "Gas"
+msgstr "Gas"
+
+#: templates/base.html:46
+msgid "Tata Sky"
+msgstr "Tata Himmel"
+
+#: templates/base.html:49
+msgid "Others"
+msgstr "Andere"
+
+#: templates/base.html:61
+msgid "Profile"
+msgstr "Profil"
+
+#: templates/base.html:64
+msgid "Log Out"
+msgstr "Ausloggen"
+
+#: templates/base.html:68
+msgid "Sign In"
+msgstr "anmelden"
+
+#: templates/base.html:71
+msgid "Sign Up"
+msgstr "Anmelden"
+
+#: templates/footer.html:10
+msgid "About"
+msgstr "Über"
+
+#: templates/footer.html:14
+msgid "Contact Us"
+msgstr "kontaktiere uns"
+
+#: templates/footer.html:19
+msgid "About Us"
+msgstr "Über uns"
+
+#: templates/footer.html:25
+msgid "Help"
+msgstr "Hilfe"
+
+#~ msgid "Forgot Password?"
+#~ msgstr "Passwort vergessen?"
+
+#~ msgid "Need an account?"
+#~ msgstr "Brauche ein Konto"
+
+#~ msgid "Log In Again"
+#~ msgstr "Nochmal anmelden"
+
+#~ msgid "Password Request"
+#~ msgstr "Passwortanfrage"
+
+#~ msgid "Request Password Reset"
+#~ msgstr "Fordere Passwort-Reset an"
+
+#~ msgid "Reset Password"
+#~ msgstr "Passwort zurücksetzen"
+
+#~ msgid "Profile Info"
+#~ msgstr "Profil Information"
+
+#~ msgid "Update"
+#~ msgstr "aktualisieren"
+
+#~ msgid "Already have an account?"
+#~ msgstr "Sie haben bereits ein Konto?"

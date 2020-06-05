@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-26 15:15+1000\n"
+"POT-Creation-Date: 2020-06-05 14:46+1000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,30 +22,111 @@ msgstr ""
 msgid "milk"
 msgstr "दूध"
 
-#: milk/templates/milk/milk.html:9
-msgid "Start Date"
-msgstr "आरंभ दिनांक"
+#: milk/templates/milk/milk.html:14
+#, fuzzy
+#| msgid "Supplier"
+msgid "Supply"
+msgstr "प्रदायक"
 
-#: milk/templates/milk/milk.html:11
-msgid "End Date"
-msgstr "अंतिम दिनांक"
+#: milk/templates/milk/milk.html:16 milk/templates/milk/milk.html:26
+#: milk/templates/milk/milk.html:37
+msgid "View"
+msgstr "दृश्य"
 
-#: milk/templates/milk/milk.html:19
-msgid "Milk Service"
-msgstr "दूध सेवा"
+#: milk/templates/milk/milk.html:24 milk/templates/milk/milk.html:103
+msgid "Bill"
+msgstr "बिल"
 
-#: milk/templates/milk/milk.html:23
+#: milk/templates/milk/milk.html:27
+msgid "Generate"
+msgstr "उत्पन्न"
+
+#: milk/templates/milk/milk.html:35
+msgid "Payment"
+msgstr "भुगतान"
+
+#: milk/templates/milk/milk.html:38
+msgid "Pay"
+msgstr "वेतन"
+
+#: milk/templates/milk/milk.html:45
+msgid "Add Supply"
+msgstr "आपूर्ति जोड़ें"
+
+#: milk/templates/milk/milk.html:53 milk/templates/milk/milk.html:145
+msgid "Search"
+msgstr "खोज"
+
+#: milk/templates/milk/milk.html:61
+msgid "Milk Supply"
+msgstr "दूध वितरण"
+
+#: milk/templates/milk/milk.html:65 milk/templates/milk/milk.html:107
+#: milk/templates/milk/milk.html:157
 msgid "Supplier"
 msgstr "प्रदायक"
 
-#: milk/templates/milk/milk.html:24
+#: milk/templates/milk/milk.html:66
 msgid "Date"
 msgstr "दिनांक"
 
-#: milk/templates/milk/milk.html:25
+#: milk/templates/milk/milk.html:67
 msgid "Quantity"
 msgstr "मात्रा"
 
-#: milk/templates/milk/milk.html:26
+#: milk/templates/milk/milk.html:68
 msgid "Remark"
 msgstr "टिप्पणी"
+
+#: milk/templates/milk/milk.html:80
+msgid "Edit"
+msgstr "संपादित करें"
+
+#: milk/templates/milk/milk.html:96
+msgid "Update"
+msgstr "बदले"
+
+#: milk/templates/milk/milk.html:108
+msgid "Start Date"
+msgstr "आरंभ दिनांक"
+
+#: milk/templates/milk/milk.html:109
+msgid "End Date"
+msgstr "अंतिम दिनांक"
+
+#: milk/templates/milk/milk.html:110 milk/templates/milk/milk.html:158
+msgid "Amount"
+msgstr "रकम"
+
+#: milk/templates/milk/milk.html:132
+msgid "Generate Bill"
+msgstr "बिल उत्पन्न"
+
+#: milk/templates/milk/milk.html:153
+msgid "Payment View"
+msgstr "भुगतान दृश्य"
+
+#: milk/templates/milk/milk.html:159
+#, fuzzy
+#| msgid "Start Date"
+msgid "Payment Date"
+msgstr "आरंभ दिनांक"
+
+#: milk/templates/milk/milk.html:160
+msgid "Remaining Amount"
+msgstr "शेष राशि"
+
+#: milk/templates/milk/milk.html:161
+#, fuzzy
+#| msgid "Remark"
+msgid "Remaks"
+msgstr "टिप्पणी"
+
+#: milk/templates/milk/payment.html:6
+#, fuzzy
+#| msgid "Start Date"
+msgid "Payment Details"
+msgstr "आरंभ दिनांक"
+
+#~ msgid "Milk Service"
+#~ msgstr "दूध सेवा"

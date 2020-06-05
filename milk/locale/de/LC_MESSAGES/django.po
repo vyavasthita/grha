@@ -1,0 +1,121 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-05 14:46+1000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: milk/apps.py:8
+msgid "milk"
+msgstr "Milch"
+
+#: milk/templates/milk/milk.html:14
+msgid "Supply"
+msgstr "liefern"
+
+#: milk/templates/milk/milk.html:16 milk/templates/milk/milk.html:26
+#: milk/templates/milk/milk.html:37
+msgid "View"
+msgstr "Aussicht"
+
+#: milk/templates/milk/milk.html:24 milk/templates/milk/milk.html:103
+msgid "Bill"
+msgstr "Rechnung"
+
+#: milk/templates/milk/milk.html:27
+msgid "Generate"
+msgstr "generieren"
+
+#: milk/templates/milk/milk.html:35
+msgid "Payment"
+msgstr "Zahlung"
+
+#: milk/templates/milk/milk.html:38
+msgid "Pay"
+msgstr "Zahlen"
+
+#: milk/templates/milk/milk.html:45
+msgid "Add Supply"
+msgstr "Angebot hinzufügen"
+
+#: milk/templates/milk/milk.html:53 milk/templates/milk/milk.html:145
+msgid "Search"
+msgstr "Suche"
+
+#: milk/templates/milk/milk.html:61
+msgid "Milk Supply"
+msgstr "Milchversorgung"
+
+#: milk/templates/milk/milk.html:65 milk/templates/milk/milk.html:107
+#: milk/templates/milk/milk.html:157
+msgid "Supplier"
+msgstr "Lieferant"
+
+#: milk/templates/milk/milk.html:66
+msgid "Date"
+msgstr "Datum"
+
+#: milk/templates/milk/milk.html:67
+msgid "Quantity"
+msgstr "Menge"
+
+#: milk/templates/milk/milk.html:68
+msgid "Remark"
+msgstr "Anmerkung"
+
+#: milk/templates/milk/milk.html:80
+msgid "Edit"
+msgstr "Bearbeiten"
+
+#: milk/templates/milk/milk.html:96
+msgid "Update"
+msgstr "Aktualisieren"
+
+#: milk/templates/milk/milk.html:108
+msgid "Start Date"
+msgstr "Anfangsdatum"
+
+#: milk/templates/milk/milk.html:109
+msgid "End Date"
+msgstr "Endtermin"
+
+#: milk/templates/milk/milk.html:110 milk/templates/milk/milk.html:158
+msgid "Amount"
+msgstr "Menge"
+
+#: milk/templates/milk/milk.html:132
+msgid "Generate Bill"
+msgstr "Rechnung erstellen"
+
+#: milk/templates/milk/milk.html:153
+msgid "Payment View"
+msgstr "Zahlungsansicht"
+
+#: milk/templates/milk/milk.html:159
+msgid "Payment Date"
+msgstr "Zahlungsdatum"
+
+#: milk/templates/milk/milk.html:160
+msgid "Remaining Amount"
+msgstr "Restbetrag"
+
+#: milk/templates/milk/milk.html:161
+msgid "Remaks"
+msgstr "Remaks"
+
+#: milk/templates/milk/payment.html:6
+msgid "Payment Details"
+msgstr "Zahlungsdetails"
