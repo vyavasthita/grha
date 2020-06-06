@@ -8,12 +8,6 @@ from calendar import monthrange
 def last_day_of_month(date_value):
     return date_value.replace(day = monthrange(date_value.year, date_value.month)[1])
 
-def generate_service_list():
-    pass
-
-def get_suppliers():
-    pass
-
 def get_bill_amt(services):
     amount = 0
 

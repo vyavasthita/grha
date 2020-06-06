@@ -5,6 +5,7 @@ from calendar import monthrange
 from django.views import View
 from .forms import DateSelectForm, SupplyUpdateForm
 from enum import IntEnum
+from django.contrib import messages
 
 
 def last_day_of_month(date_value):
@@ -118,8 +119,11 @@ class SupplyUpdateView(View):
 
         if update_form.is_valid():
             update_form.save()
+            date = update_form.cleaned_data.get('date')
             context = {"view_type" : ViewType.SUPPLY_UPDATE, "supply_update" : update_form}
-
+            messages.success(request, f"Record for  '{date}' is updated successfully.")
+        else:
+            messages.error(request, f"Failed to update record.")
         return render(request, 'milk/milk.html', context)
 
 class BillView(View):
