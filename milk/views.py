@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Supplier, Service, Bill, Payment
 from datetime import datetime, date
 from calendar import monthrange
@@ -96,8 +96,12 @@ class SupplyAddView(View):
 
         if update_form.is_valid():
             update_form.save()
+            date = update_form.cleaned_data.get('date')
             context = {"view_type" : ViewType.SUPPLY_UPDATE, "supply_update" : update_form}
-
+            messages.success(request, f"Milk Supply record for '{date}' is added successfully.")
+            return redirect('nsmilk:supply_view')
+        else:
+            messages.error(request, f"Failed to add milk supply record.")
         return render(request, 'milk/milk.html', context)
 
 
@@ -121,10 +125,12 @@ class SupplyUpdateView(View):
             update_form.save()
             date = update_form.cleaned_data.get('date')
             context = {"view_type" : ViewType.SUPPLY_UPDATE, "supply_update" : update_form}
-            messages.success(request, f"Record for  '{date}' is updated successfully.")
+            messages.success(request, f"Milk update record for '{date}' is updated successfully.")
+            return redirect('nsmilk:supply_view')
         else:
-            messages.error(request, f"Failed to update record.")
+            messages.error(request, f"Failed to update milk supply record.")
         return render(request, 'milk/milk.html', context)
+
 
 class BillView(View):
     class BillDetail:
@@ -186,6 +192,7 @@ class BillUpdateView(View):
 
     def post(self, request):
         context = dict()
+        service_found = False
 
         date_selector = DateSelectForm(request.POST)
 
@@ -196,21 +203,33 @@ class BillUpdateView(View):
             for supplier in Supplier.objects.all():
                 amount = 0
 
-                for service_ob in Service.objects.all().filter(
+                services = Service.objects.all().filter(
                         date__gte = start_date, 
                         date__lte = end_date,
-                        supplier = supplier):
-                    amount += service_ob.quantity * service_ob.rate.rate
+                        supplier = supplier)
 
-                # Update Bill
-                bill = Bill(supplier = supplier, start_date = start_date,
-                            end_date = end_date, amount = amount)
+                if services:
+                    for service_ob in services:
+                        amount += service_ob.quantity * service_ob.rate.rate
 
-                bill.save()
+                    # Update Bill
+                    bill = Bill(supplier = supplier, start_date = start_date,
+                                end_date = end_date, amount = amount)
+
+                    bill.save()
+
+                    service_found = True
+
+                    messages.success(request, f"Milk bill for supplier '{supplier.name}', between '{start_date}' and '{end_date}', is generated successfully.")
+            
+            if not service_found:
+                messages.warning(request, f"Skipped generating bill, between '{start_date}' and '{end_date}', as no milk supply found between the given dates.")
 
             # Find all suppliers who delivered service between the given
             context = {"view_type" : ViewType.BILL_UPDATE, "bill_generate" : date_selector}
-
+            return redirect('nsmilk:bill_view')
+        else:
+            messages.error(request, f"Failed to generate milk bill.")
         return render(request, 'milk/milk.html', context)
 
 
