@@ -20,7 +20,7 @@ class ContactForm(forms.Form):
                                 attrs=
                                 {"rows": 3, "cols":20, "class" : "form-control-sm", "placeholder" : "Enter the Message"}
                                 ))
-    my_email        =   forms.EmailField(widget=forms.TextInput(
+    sender        =   forms.EmailField(widget=forms.TextInput(
                                     attrs=
                                     {
                                         "placeholder" : "Enter your email address."
