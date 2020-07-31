@@ -3,6 +3,7 @@ from django.http import HttpResponseRedirect
 from lib.grah.forms import ContactForm
 from django.core.mail import send_mail
 from decouple import config, Csv        # Please update .env file or config vars on Heroku
+from django.contrib import messages
 
 
 def contact(request):
@@ -30,8 +31,10 @@ def contact(request):
                 recipients.append(sender)
 
             send_mail(subject, message, sender, recipients)
+            messages.success(request, "Thank You. Message is sent successfully.")
             return HttpResponseRedirect('/thanks/')
-
+        else:
+            messages.error(request, f"Failed to send message.")
     else:   # GET request
         contact = ContactForm()
 
